@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 
-// create a prompt component that then displays the prompt in the image area and also has a button to submit the prompt and then display the image
+
 
 function App() {
 
