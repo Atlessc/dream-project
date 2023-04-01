@@ -15,8 +15,8 @@ function App() {
     setPrompt(event.target.value)
   }
   // create an async function to send the prompt to the openai api
+  // and then set the response to the state
 
-  
   const handleSubmit = (event) => {
     event.preventDefault()
     console.log(prompt)
