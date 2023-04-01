@@ -14,7 +14,11 @@ function App() {
   const handlePromptChange = (event) => {
     setPrompt(event.target.value)
   }
-
+  
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    console.log(prompt)
+  }
 
 
 
@@ -24,6 +28,7 @@ function App() {
       <header className="App-header">
         <h1>dream</h1>
       </header>
+      <hr/>
       <div className='imageArea'>
         <div className='Image'></div>
       </div>
@@ -33,9 +38,8 @@ function App() {
         <input type="textarea" id="prompt" name="prompt" value={prompt} onChange={handlePromptChange} autoFocus/>
         {prompt.length} / {maxChars}
         <br/>
-        <button className="Submit" type="submit">Submit</button>
+        <button className="Submit" type="submit" onClick={handleSubmit}>Submit</button>
       </form>
-      <div className="image-area">image</div>
     </div>
   )
 }
