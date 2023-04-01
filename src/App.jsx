@@ -14,6 +14,8 @@ function App() {
   const handlePromptChange = (event) => {
     setPrompt(event.target.value)
   }
+  // create an async function to send the prompt to the openai api
+
   
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -35,7 +37,7 @@ function App() {
       <hr/>
       <form className="prompt-container">
         <label htmlFor="prompt"  setMaxChars={setMaxChars}>Prompt:</label>
-        <input type="textarea" id="prompt" name="prompt" value={prompt} onChange={handlePromptChange} autoFocus/>
+        <input type="textarea" id="prompt" name="prompt" value={prompt} onChange={handlePromptChange} autoFocus maxLength={200}/>
         {prompt.length} / {maxChars}
         <br/>
         <button className="Submit" type="submit" onClick={handleSubmit}>Submit</button>
